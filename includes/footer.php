@@ -1,22 +1,29 @@
 <!-- Footer -->
 <footer>
-    <div class="row">
-        <div class="col-lg-12">
-            <p>Copyright &copy; Your Website 2014</p>
-        </div>
-        <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.row -->
+    <div class="container">
+        <div class="col-sm-12">
+            <p class="pull-right">Copyright &copy; <?php echo date("Y");?>, CMS</p>
+        </div> <!--col-->
+    </div>   <!--container-->
 </footer>
 
-</div>
-<!-- /.container -->
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
+<script src="js/material.min.js"></script>
+
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="js/nouislider.min.js" type="text/javascript"></script>
+
+<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+<script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+<script src="js/material-kit.js" type="text/javascript"></script>
 
 </body>
 

@@ -5,7 +5,7 @@
 <?php include 'includes/navigation.php'; ?>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container main-content">
 
         <div class="row">
 
@@ -47,6 +47,8 @@
 
         </div>
         <!-- /.row -->
+    </div>
+<!-- /.container -->
 
 <?php include 'includes/footer.php'; ?>
 

@@ -9,19 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CMS Home</title>
-
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <title>SB Admin - Bootstrap Admin Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/material-kit.css" rel="stylesheet"/>
 
     <!-- Custom CSS -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,3 +30,5 @@
 </head>
 
 <body>
+
+<div id="wrapper">

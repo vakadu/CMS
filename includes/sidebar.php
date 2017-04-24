@@ -1,5 +1,5 @@
 <!-- Blog Sidebar Widgets Column -->
-<div class="col-md-4">
+<div class="col-md-4 main-sidebar">
     <!-- Blog Search Well -->
     <div class="well">
         <h4>Blog Search</h4>
@@ -7,7 +7,7 @@
             <div class="input-group">
                 <input type="text" name="search" class="form-control">
                 <span class="input-group-btn">
-                <button name="submit" class="btn btn-default" type="submit">
+                <button name="submit" class="btn btn-primary" type="submit">
                     <span class="glyphicon glyphicon-search"></span>
                 </button>
             </span>

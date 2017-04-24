@@ -6,8 +6,94 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h1, h2 {
+    margin: 0 0 20px;
+}
+
+h3 {
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+a:link, a:visited {
+    color: #dd5638;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #c9302c;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+p.lead {
+    font-weight: normal;
+}
+
+button, input, .btn, a.btn {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: white;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+button.btn:focus {
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn.btn-primary {
+    background-color: #D10029;
+    border: none;
+}
+
+.btn.btn-primary:hover {
+    background: #7F0019;
+    border-color: #7F0019;
+}
+
+.navbar{
+    background-color: #2C3E50;
+}
+
+.main-content, .main-sidebar{
+    margin-top: 30px;
+}
+
+
+.well{
+    background-color: white;
 }
 
 footer {
-    margin: 50px 0;
+    background: #2C3E50;
+    color: white;
+    padding: 20px 0 10px;
+    font-size: 12px;
 }
