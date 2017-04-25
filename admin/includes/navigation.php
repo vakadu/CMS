@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -46,13 +46,14 @@
                 </ul>
             </li>
             <li>
-                <a href=""><i class="fa fa-fw fa-dashboard"></i> Categories</a>
+                <a href="categories.php"><i class="fa fa-fw fa-dashboard"></i> Categories</a>
             </li>
             <li>
-                <a href=""><i class="fa fa-fw fa-dashboard"></i> Comments</a>
+                <a href=""><i class="fa fa-comments" aria-hidden="true"></i> Comments</a>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#users_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#users_dropdown">
+                    <i class="fa fa-users" aria-hidden="true"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="users_dropdown" class="collapse">
                     <li>
                         <a href="#">View All Users</a>
