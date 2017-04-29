@@ -164,3 +164,9 @@ ul.nav.navbar-nav.side-nav {
 .side-nav>li>ul>li>a:hover {
     color: #fff;
 }
+
+div#file_input_text_div {
+    width: auto;
+    margin-top: -42px;
+    margin-left: 35px;
+}

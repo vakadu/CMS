@@ -10,8 +10,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Admin
-                    <small>Author</small>
+                    Categories
                 </h1>
                 <div class="col-xs-6">
 
@@ -26,7 +25,7 @@
                         </div>
                     </form>
                     <?php
-                    //update and include
+                    //update and include on clicking edit link
                     if (isset($_GET['edit'])){
                         $cat_id = $_GET['edit'];
                         include "includes/update_categories.php";
@@ -40,6 +39,8 @@
                         <tr>
                             <th>ID</th>
                             <th>Category Title</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <tbody>

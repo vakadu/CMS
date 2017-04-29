@@ -8,7 +8,7 @@
                 <input type="text" name="search" class="form-control">
                 <span class="input-group-btn">
                 <button name="submit" class="btn btn-primary" type="submit">
-                    <span class="glyphicon glyphicon-search"></span>
+                    <i class="material-icons">search</i>
                 </button>
             </span>
             </div>
@@ -30,8 +30,10 @@
 
                     <?php
                     while ($row = mysqli_fetch_assoc($select_categories_sidebar)){
-                    $cat_title = $row['cat_title'];
-                    echo "<li><a href='#'>{$cat_title}</a></li>";
+                        $cat_id = $row['cat_id'];
+                        $cat_title = $row['cat_title'];
+                        echo "<li><a href='category.php?category=$cat_id'>{$cat_title}
+                                  </a></li>";
                     }
                     ?>
 
