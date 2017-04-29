@@ -10,7 +10,7 @@
     <div class="row">
 
         <!-- Blog Entries Column -->
-        <div class="col-md-8">
+        <div class="col-md-12">
 
             <?php
 
@@ -37,9 +37,9 @@
                     $post_date; ?></p>
                 <hr>
                 <img class="img-responsive" src="images/<?php echo $post_image; ?>"
-                     width="900" height="300" alt="Image not displayed">
+                      alt="Image not displayed">
                 <hr>
-                <p><?php echo $post_content; ?></p>
+                <p class="text-justify"><?php echo $post_content; ?></p>
                 <hr>
 
                 <?php
@@ -103,8 +103,6 @@
             </div>
 
         </div>
-
-        <?php include 'includes/sidebar.php'; ?>
 
     </div>
     <!-- /.row -->

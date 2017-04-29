@@ -15,14 +15,6 @@ h1 {
     font-size: 3em;
 }
 
-h1, h2 {
-    margin: 0 0 20px;
-}
-
-h3 {
-    margin: 20px 0;
-}
-
 h4 {
     font-size: 18px;
 }
@@ -34,10 +26,6 @@ a:link, a:visited {
 a:hover {
     text-decoration: none;
     color: #c9302c;
-}
-
-p {
-    margin: 0 0 15px;
 }
 
 p.lead {
@@ -70,6 +58,15 @@ img {
 .btn.btn-primary:hover {
     background: #7F0019;
     border-color: #7F0019;
+}
+
+.btn.btn-primary:focus, .btn.btn-primary:active,.btn.btn-primary:active:focus{
+    background-color: #7F0019;
+}
+
+.form-control, .form-group .form-control {
+    background-image: linear-gradient(#D10029, #D10029), linear-gradient(#D2D2D2,
+    #D2D2D2) !important;
 }
 
 .navbar{

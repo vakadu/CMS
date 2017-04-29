@@ -18,10 +18,12 @@
 
                     <form action="" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="cat_title" placeholder="Add Category">
+                            <input type="text" class="form-control" name="cat_title"
+                                   placeholder="Add Category">
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" name="submit" value="Add Category">
+                            <input type="submit" class="btn btn-primary" name="submit"
+                                   value="Add Category">
                         </div>
                     </form>
                     <?php

@@ -34,13 +34,15 @@
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li>
-                <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+            <li class="<?= ($activePage == 'index') ? 'active':''; ?>">
+                <a href="index.php"><i class="material-icons md-25
+                orange600">dashboard</i> Dashboard</a>
             </li>
-            <li>
-                <a href="javascript:;" data-toggle="collapse"data-target="#posts_dropdown"><i
-                class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw
-                fa-caret-down"></i>
+            <li class="<?= ($activePage == 'posts') ? 'active':''; ?>">
+                <a href="javascript:;"
+                   data-toggle="collapse"data-target="#posts_dropdown"><i
+                   class="material-icons md-25 orange600">border_color</i></i> Posts <i
+                            class="fa fa-fw fa-caret-down"></i>
                 </a>
                 <ul id="posts_dropdown" class="collapse">
                     <li>
@@ -51,16 +53,19 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="categories.php"><i class="fa fa-fw fa-dashboard"></i> Categories</a>
+            <li class="<?= ($activePage == 'categories') ? 'active':''; ?>">
+                <a href="categories.php"><i class="material-icons md-25
+                        orange600">folder_special</i>  Categories</a>
             </li>
-            <li>
-                <a href=""><i class="fa fa-comments" aria-hidden="true"></i> Comments</a>
+            <li class="<?= ($activePage == 'comments') ? 'active':''; ?>">
+                <a href=""><i class="material-icons md-25
+                        orange600">comment</i> Comments</a>
             </li>
-            <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#users_dropdown">
-                    <i class="fa fa-users" aria-hidden="true"></i> Users <i class="fa fa-fw
-                    fa-caret-down"></i>
+            <li class="<?= ($activePage == 'users') ? 'active':''; ?>">
+                <a href="javascript:;" data-toggle="collapse"
+                   data-target="#users_dropdown">
+                    <i class="material-icons md-25 orange600">people</i> Users <i
+                            class="fa fa-fw fa-caret-down"></i>
                 </a>
                 <ul id="users_dropdown" class="collapse">
                     <li>
@@ -71,8 +76,9 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href=""><i class="fa fa-fw fa-dashboard"></i> Profile</a>
+            <li class="<?= ($activePage == 'profile') ? 'active':''; ?>">
+                <a href=""><i class="material-icons md-25
+                orange600">sentiment_very_satisfied</i> Profile</a>
             </li>
         </ul>
     </div>

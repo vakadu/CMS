@@ -1,6 +1,8 @@
 <?php include '../includes/database.php'; ?>
 <?php include 'functions.php'; ?>
 
+<?php $activePage = basename($_SERVER['PHP_SELF'], ".php"); ?>
+
 <?php ob_start(); ?>
 
 <!DOCTYPE html>
