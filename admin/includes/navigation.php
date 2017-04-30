@@ -46,10 +46,11 @@
                 </a>
                 <ul id="posts_dropdown" class="collapse">
                     <li>
-                        <a href="posts.php">View All Posts</a>
+                        <a href="posts.php" style="color: white">View All Posts</a>
                     </li>
                     <li>
-                        <a href="posts.php?source=add_post">Add Post</a>
+                        <a href="posts.php?source=add_post" style="color: white">Add
+                            Post</a>
                     </li>
                 </ul>
             </li>
@@ -58,7 +59,7 @@
                         orange600">folder_special</i>  Categories</a>
             </li>
             <li class="<?= ($activePage == 'comments') ? 'active':''; ?>">
-                <a href=""><i class="material-icons md-25
+                <a href="comments.php"><i class="material-icons md-25
                         orange600">comment</i> Comments</a>
             </li>
             <li class="<?= ($activePage == 'users') ? 'active':''; ?>">
@@ -69,10 +70,10 @@
                 </a>
                 <ul id="users_dropdown" class="collapse">
                     <li>
-                        <a href="#">View All Users</a>
+                        <a href="#" style="color: white">View All Users</a>
                     </li>
                     <li>
-                        <a href="#">Add User</a>
+                        <a href="#" style="color: white">Add User</a>
                     </li>
                 </ul>
             </li>

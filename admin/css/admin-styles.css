@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 3em;
+    color: #027702;
 }
 
 h1, h2 {
@@ -27,12 +28,12 @@ h4 {
 }
 
 a:link, a:visited {
-    color: #dd5638;
+    color: #D10029;
 }
 
 a:hover {
     text-decoration: none;
-    color: #c9302c;
+    color: #7F0019;
 }
 
 p {
