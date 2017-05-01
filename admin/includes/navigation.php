@@ -18,7 +18,7 @@
         </li>
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa
-            fa-user"></i> John Smith <b class="caret"></b>
+            fa-user"></i> <?php echo $_SESSION['username']; ?> <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
                 <li>
@@ -26,7 +26,8 @@
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                    <a href="../includes/logout.php"><i class="fa fa-fw
+                    fa-power-off"></i> LogOut</a>
                 </li>
             </ul>
         </li>
@@ -70,10 +71,10 @@
                 </a>
                 <ul id="users_dropdown" class="collapse">
                     <li>
-                        <a href="#" style="color: white">View All Users</a>
+                        <a href="users.php" style="color: white">View All Users</a>
                     </li>
                     <li>
-                        <a href="#" style="color: white">Add User</a>
+                        <a href="users.php?source=add_user" style="color: white">Add User</a>
                     </li>
                 </ul>
             </li>
