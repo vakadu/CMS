@@ -14,35 +14,46 @@
 
             <?php
 
-            if (isset($_GET['p_id'])){
+            if (isset($_GET['p_id'])) {
                 $the_post_id = $_GET['p_id'];
+
+                $view_query = "UPDATE posts SET post_views_count = post_views_count + 1 WHERE post_id = $the_post_id";
+                $send_query = mysqli_query($connection, $view_query);
+                if (!$send_query){
+                    die("Query Failed " . mysqli_error($connection));
+                }
+
+                $query = "SELECT * FROM posts WHERE post_id = $the_post_id";
+                $select_post = mysqli_query($connection, $query);
+                while ($row = mysqli_fetch_assoc($select_post)) {
+                    $post_title = $row['post_title'];
+                    $post_author = $row['post_author'];
+                    $post_date = $row['post_date'];
+                    $post_image = $row['post_image'];
+                    $post_content = $row['post_content'];
+                    ?>
+
+                    <h2>
+                        <a href="#"><?php echo $post_title; ?></a>
+                    </h2>
+                    <p class="lead">
+                        by <a href="index.php"><?php echo $post_author; ?></a>
+                    </p>
+                    <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo
+                        $post_date; ?></p>
+                    <hr>
+                    <img class="img-responsive" src="images/<?php echo $post_image; ?>"
+                         alt="Image not displayed">
+                    <hr>
+                    <p class="text-justify"><?php echo $post_content; ?></p>
+                    <hr>
+
+                    <?php
+                }
             }
-            $query = "SELECT * FROM posts WHERE post_id = $the_post_id";
-            $select_post = mysqli_query($connection, $query);
-            while ($row = mysqli_fetch_assoc($select_post)){
-                $post_title = $row['post_title'];
-                $post_author = $row['post_author'];
-                $post_date = $row['post_date'];
-                $post_image = $row['post_image'];
-                $post_content = $row['post_content'];
-                ?>
+            else{
 
-                <h2>
-                    <a href="#"><?php echo $post_title; ?></a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php"><?php echo $post_author; ?></a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo
-                    $post_date; ?></p>
-                <hr>
-                <img class="img-responsive" src="images/<?php echo $post_image; ?>"
-                      alt="Image not displayed">
-                <hr>
-                <p class="text-justify"><?php echo $post_content; ?></p>
-                <hr>
-
-                <?php
+                header("Location: index.php");
             }
             ?>
 

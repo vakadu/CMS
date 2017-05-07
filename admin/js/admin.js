@@ -17,6 +17,13 @@ $(document).ready(function () {
    });
 });
 
+//For preloader
+var div_box = "<div id='load-screen'><div id='loading'></div></div>";
+$('body').prepend(div_box);
+$('#load-screen').delay(1000).fadeOut(600, function () {
+   $(this).remove();
+});
+
 // File choose in admin add_post starts
 var fileInputTextDiv = document.getElementById('file_input_text_div');
 var fileInput = document.getElementById('file_input_file');
