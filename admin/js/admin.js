@@ -1,3 +1,22 @@
+//For editor
+tinymce.init({ selector:'textarea' });
+
+//For Checkboxes
+$(document).ready(function () {
+   $('#selectAllBoxes').click(function (event) {
+       if (this.checked){
+           $('.checkBoxes').each(function () {
+              this.checked = true;
+           });
+       }
+       else {
+           $('.checkBoxes').each(function () {
+               this.checked = false;
+           });
+       }
+   });
+});
+
 // File choose in admin add_post starts
 var fileInputTextDiv = document.getElementById('file_input_text_div');
 var fileInput = document.getElementById('file_input_file');

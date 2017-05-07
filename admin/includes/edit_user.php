@@ -86,20 +86,6 @@ if (isset($_POST['edit_user'])){
         echo $user_password; ?>">
     </div>
 
-<!--        <div class="form-group">-->
-    <!--        <div class="file_input_div">-->
-    <!--            <div class="file_input">-->
-    <!--                <i class="material-icons md-48">file_upload</i>-->
-    <!--                <input id="file_input_file" class="none" type="file" name="image">-->
-    <!--            </div>-->
-    <!--            <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">-->
-    <!--                <input class="file_input_text mdl-textfield__input form-control" type="text" disabled readonly id="file_input_text"-->
-    <!--                       style="color: #1a1a1a" placeholder="Upload Images">-->
-    <!--                <label class="mdl-textfield__label" for="file_input_text"></label>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-
     <div class="form-group">
         <input type="submit" class="btn btn-primary" name="edit_user" value="Update
         user">

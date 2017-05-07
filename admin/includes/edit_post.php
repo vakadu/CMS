@@ -54,6 +54,19 @@ if (isset($_POST['update_post'])){
     $query .= "WHERE post_id = '{$edit_p_id}'";
     $update_query = mysqli_query($connection, $query);
     confirmQuery($update_query);
+
+    echo "<div class='alert alert-success text-center'>
+            <div class='container-fluid'>
+              <div class='alert-icon'>
+                <i class='material-icons'>check</i>
+              </div>
+              <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                <span aria-hidden='true'><i class='material-icons'>clear</i></span>
+              </button>
+              <b>Success! </b> Post has been updated.<b><a href=
+              '../post.php?p_id={$edit_p_id}'> View Post</a> </b>
+            </div>
+          </div>";
 }
 
 ?>
@@ -88,8 +101,17 @@ if (isset($_POST['update_post'])){
 
     <div class="form-group">
         <label for="post_status">Post Status</label>
-        <input type="text" value="<?php echo $post_status ?>" class="form-control"
-        name="post_status">
+        <select name="post_status" class="form-control">
+            <option value='<?php echo $post_status; ?>'><?php echo ucfirst($post_status); ?></option>
+            <?php
+            if ($post_status == 'publish'){
+                echo "<option value='draft'>Draft</option>";
+            }
+            else{
+                echo "<option value='publish'>Publish</option>";
+            }
+            ?>
+        </select>
     </div>
 
     <div class="form-group">

@@ -28,6 +28,16 @@ a:hover {
     color: #7F0019;
 }
 
+p{
+    text-align: justify;
+    font-family: 'Muli', sans-serif !important;
+}
+
+p span{
+    text-align: justify;
+    font-family: 'Muli', sans-serif !important;
+}
+
 p.lead {
     font-weight: normal;
 }

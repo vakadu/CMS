@@ -22,6 +22,19 @@ if (isset($_POST['create_post'])){
     $create_post_query = mysqli_query($connection, $query);
 
     confirmQuery($create_post_query);
+    $last_id = mysqli_insert_id($connection);
+    echo "<div class='alert alert-success text-center'>
+            <div class='container-fluid'>
+              <div class='alert-icon'>
+                <i class='material-icons'>check</i>
+              </div>
+              <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                <span aria-hidden='true'><i class='material-icons'>clear</i></span>
+              </button>
+              <b>Success! </b> {$post_title} post created.<b><a href=
+              '../post.php?p_id={$last_id}'> View Post</a> </b>
+            </div>
+          </div>";
 }
 ?>
 
@@ -34,7 +47,7 @@ if (isset($_POST['create_post'])){
     <div class="form-group">
         <label for="post_category">Category</label>
         <select name="post_category" class="form-control">
-            <option value=''>All Categories</option>;
+            <option value=''>All Categories</option>
             <?php
             $query = "SELECT * FROM categories";
             $category_query = mysqli_query($connection, $query);
@@ -56,7 +69,11 @@ if (isset($_POST['create_post'])){
 
     <div class="form-group">
         <label for="post_status">Post Status</label>
-        <input type="text" class="form-control" name="post_status">
+        <select name="post_status" class="form-control">
+            <option value='draft'>Select Options</option>
+            <option value='publish'>Publish</option>
+            <option value='draft'>Draft</option>
+        </select>
     </div>
 
     <div class="form-group">
