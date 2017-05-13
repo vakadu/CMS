@@ -12,7 +12,6 @@ if (isset($_POST['create_post'])){
     $post_content = str_replace("'", "''", $post_content);
     $post_comment_count = 0;
 
-
     move_uploaded_file($post_image_temp, "../images/$post_image");
 
     $query  = "INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status) ";
@@ -62,6 +61,23 @@ if (isset($_POST['create_post'])){
         </select>
     </div>
 
+<!--    <div class="form-group">-->
+<!--        <label for="post_users">Users</label>-->
+<!--        <select name="post_users" class="form-control">-->
+<!--            <option value=''>All Users</option>-->
+<!--            --><?php
+//            $query = "SELECT * FROM users";
+//            $select_users = mysqli_query($connection, $query);
+//            confirmQuery($select_users);
+//            while($row = mysqli_fetch_assoc($select_users)) {
+//                $user_id = $row["user_id"];
+//                $username = $row["username"];
+//                echo "<option value='{$user_id}'>{$username}</option>";
+//            }
+//            ?>
+<!--        </select>-->
+<!--    </div>-->
+
     <div class="form-group">
         <label for="author">Post Author</label>
         <input type="text" class="form-control" name="author">
@@ -77,17 +93,8 @@ if (isset($_POST['create_post'])){
     </div>
 
     <div class="form-group">
-        <div class="file_input_div">
-            <div class="file_input">
-                <i class="material-icons md-48">file_upload</i>
-                <input id="file_input_file" class="none" type="file" name="image">
-            </div>
-            <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
-                <input class="file_input_text mdl-textfield__input form-control" type="text" disabled readonly id="file_input_text"
-                style="color: #1a1a1a" placeholder="Upload Images">
-                <label class="mdl-textfield__label" for="file_input_text"></label>
-            </div>
-        </div>
+        <label for="post_image">Upload Image</label>
+       <input id="file_input_file" class="form-control" type="file" name="image">
     </div>
 
     <div class="form-group">

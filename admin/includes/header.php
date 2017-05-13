@@ -31,7 +31,6 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/material-kit.css" rel="stylesheet"/>
 
     <!-- Custom CSS -->
     <link href="css/admin-styles.css" rel="stylesheet">
@@ -44,9 +43,9 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script type="text/javascript" src="js/tinymce.min.js"></script>
+<!---->
+<!--    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>-->
 
 </head>
 

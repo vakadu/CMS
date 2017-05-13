@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="
@@ -14,6 +14,9 @@
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
+        <li>
+            <a href="">Users Online: <?php echo users_online(); ?></a>
+        </li>
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa
             fa-user"></i> <?php echo strtoupper($_SESSION['username']); ?> <b

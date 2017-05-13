@@ -152,24 +152,24 @@
 
         <div class="row" style="margin: 10px 0">
             <script type="text/javascript">
-                google.charts.load('current', {'packages':['bar']});
-                google.charts.setOnLoadCallback(drawChart);
+//                google.charts.load('current', {'packages':['bar']});
+//                google.charts.setOnLoadCallback(drawChart);
 
                 function drawChart() {
                     var data = google.visualization.arrayToDataTable([
                         ['Data', 'Count'],
 
-                        <?php
-
-                            $element_text = ['Active Posts', 'Draft Posts',  'Comments',
-                                'Users', 'Subscribers', 'Categories'];
-                            $element_count = [$post_counts, $post_draft_counts,
-                                $comment_counts, $user_counts, $subscriber_counts,
-                                $category_counts];
-                            for ($i = 0; $i < 6; $i++){
-                                echo "['{$element_text[$i]}'" . ", " .
-                                    "{$element_count[$i]}],";
-                            }
+<!--                        --><?php
+//
+//                            $element_text = ['Active Posts', 'Draft Posts',  'Comments',
+//                                'Users', 'Subscribers', 'Categories'];
+//                            $element_count = [$post_counts, $post_draft_counts,
+//                                $comment_counts, $user_counts, $subscriber_counts,
+//                                $category_counts];
+//                            for ($i = 0; $i < 6; $i++){
+//                                echo "['{$element_text[$i]}'" . ", " .
+//                                    "{$element_count[$i]}],";
+//                            }
 
                         ?>
 

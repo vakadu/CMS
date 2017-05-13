@@ -9,7 +9,7 @@
                        placeholder="Search">
                 <span class="input-group-btn">
                 <button name="submit" class="btn btn-primary" type="submit">
-                    <i class="material-icons">search</i>
+                    <i class="glyphicon glyphicon-search"></i>
                 </button>
             </span>
             </div>
