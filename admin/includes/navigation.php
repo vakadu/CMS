@@ -65,6 +65,7 @@
                 <a href="comments.php"><i class="material-icons md-25
                         orange600">comment</i> Comments</a>
             </li>
+
             <li class="<?= ($activePage == 'users') ? 'active':''; ?>">
                 <a href="javascript:;" data-toggle="collapse"
                    data-target="#users_dropdown">

@@ -43,8 +43,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="js/tinymce.min.js"></script>
-<!---->
+<!--    <script type="text/javascript" src="js/tinymce.min.js"></script>-->
+
 <!--    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>-->
 
 </head>

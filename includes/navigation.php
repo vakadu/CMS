@@ -15,11 +15,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="admin">Admin</a>
-                </li>
-                <li>
+                <li class="<?= ($activePage == 'registration') ? 'active':''; ?>">
                     <a href="registration.php">Register</a>
+                </li>
+                <li class="<?= ($activePage == 'contact') ? 'active':''; ?>">
+                    <a href="contact.php">Contact</a>
                 </li>
             </ul>
         </div>

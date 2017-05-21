@@ -26,9 +26,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <?php
-                                $query = "SELECT * FROM posts";
-                                $select_all_posts = mysqli_query($connection, $query);
-                                $post_counts = mysqli_num_rows($select_all_posts);
+                                $post_counts = recordCount('posts');
                                 echo "<div class='huge'>{$post_counts}</div>";
                                 ?>
                                 <div>Posts</div>
@@ -55,9 +53,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <?php
-                                $query = "SELECT * FROM comments";
-                                $select_all_comments = mysqli_query($connection, $query);
-                                $comment_counts = mysqli_num_rows($select_all_comments);
+                                $comment_counts = recordCount('comments');
                                 echo "<div class='huge'>{$comment_counts}</div>";
                                 ?>
                                 <div>Comments</div>
@@ -84,9 +80,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <?php
-                                $query = "SELECT * FROM users";
-                                $select_all_users = mysqli_query($connection, $query);
-                                $user_counts = mysqli_num_rows($select_all_users);
+                                $user_counts = recordCount('users');
                                 echo "<div class='huge'>{$user_counts}</div>";
                                 ?>
                                 <div> Users</div>
@@ -113,9 +107,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <?php
-                                $query = "SELECT * FROM categories";
-                                $select_all_cat = mysqli_query($connection, $query);
-                                $category_counts = mysqli_num_rows($select_all_cat);
+                                $category_counts = recordCount('categories');
                                 echo "<div class='huge'>{$category_counts}</div>";
                                 ?>
                                 <div>Categories</div>
@@ -152,24 +144,24 @@
 
         <div class="row" style="margin: 10px 0">
             <script type="text/javascript">
-//                google.charts.load('current', {'packages':['bar']});
-//                google.charts.setOnLoadCallback(drawChart);
+                google.charts.load('current', {'packages':['bar']});
+                google.charts.setOnLoadCallback(drawChart);
 
                 function drawChart() {
                     var data = google.visualization.arrayToDataTable([
                         ['Data', 'Count'],
 
-<!--                        --><?php
-//
-//                            $element_text = ['Active Posts', 'Draft Posts',  'Comments',
-//                                'Users', 'Subscribers', 'Categories'];
-//                            $element_count = [$post_counts, $post_draft_counts,
-//                                $comment_counts, $user_counts, $subscriber_counts,
-//                                $category_counts];
-//                            for ($i = 0; $i < 6; $i++){
-//                                echo "['{$element_text[$i]}'" . ", " .
-//                                    "{$element_count[$i]}],";
-//                            }
+                      <?php
+
+                            $element_text = ['Active Posts', 'Draft Posts',  'Comments',
+                                'Users', 'Subscribers', 'Categories'];
+                            $element_count = [$post_counts, $post_draft_counts,
+                                $comment_counts, $user_counts, $subscriber_counts,
+                                $category_counts];
+                            for ($i = 0; $i < 6; $i++){
+                                echo "['{$element_text[$i]}'" . ", " .
+                                    "{$element_count[$i]}],";
+                            }
 
                         ?>
 

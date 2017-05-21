@@ -1,3 +1,7 @@
+<?php session_start(); ?>
+
+<?php $activePage = basename($_SERVER['PHP_SELF'], ".php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

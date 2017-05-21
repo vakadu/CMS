@@ -13,7 +13,7 @@ if (isset($_GET['p_id'])) {
         $post_category_id = $row['post_category_id'];
         $post_status = $row['post_status'];
         $post_image = $row['post_image'];
-        $post_content = $row['post_content'];
+        $post_content = mysqli_real_escape_string($connection, $row['post_content']);
         $post_tags = $row['post_tags'];
         $post_comment_count = $row['post_comment_count'];
         $post_date = $row['post_date'];
@@ -87,7 +87,12 @@ if (isset($_POST['update_post'])){
             while($row = mysqli_fetch_assoc($category_query)) {
                 $cat_id = $row["cat_id"];
                 $cat_title = $row["cat_title"];
-                echo "<option value='{$cat_id}'>{$cat_title}</option>";
+                if ($cat_id == $post_category_id){
+                    echo "<option selected value='{$cat_id}'>{$cat_title}</option>";
+                }
+                else{
+                    echo "<option value='{$cat_id}'>{$cat_title}</option>";
+                }
             }
             ?>
         </select>
@@ -130,7 +135,8 @@ if (isset($_POST['update_post'])){
     <div class="form-group">
         <label for="post_content">Post Content</label>
         <textarea name="post_content" id="" cols="30" rows="6"
-                  class="form-control"><?php echo $post_content ?></textarea>
+                  class="form-control"><?php echo str_replace('\r\n', '</br>',
+                $post_content) ?></textarea>
     </div>
 
     <div class="form-group">
