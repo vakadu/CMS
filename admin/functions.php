@@ -210,10 +210,10 @@ function login_user($username, $password){
         $_SESSION['firstname'] = $db_user_firstname;
         $_SESSION['lastname'] = $db_user_lastname;
         $_SESSION['user_role'] = $db_user_role;
-        redirect("/Material-CMS/admin/");
+        redirect("/CMS/admin/");
     }
     else{
-        redirect("/cms/index.php");
+        redirect("/CMS/index.php");
     }
 
 
